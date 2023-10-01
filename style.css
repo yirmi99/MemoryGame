@@ -1,0 +1,205 @@
+body {
+  min-height: 80vh;
+  min-width: 80vh;
+  background-color: rgb(12, 14, 131);
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline;
+  font-weight: 900;
+  font-size: 30px;
+}
+
+#div1 {
+  margin-right: 15px;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+#div2 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+#div3, #div7, #div8, #div9 {
+  font-size: 1.5em;
+}
+
+#div4 {
+  font-weight: 900;
+  font-size: 90px;
+  padding: 5px 13px;
+  margin-top: 150px;
+  justify-content: center;
+}
+
+#div5 {
+  margin-right: 15px;
+  font-weight: 300;
+  font-size: 30px;
+  padding: 5px 13px;
+  margin-top: 150px;
+  justify-content: center;
+}
+
+#div6 {
+  font-weight: 500;
+  font-size: 50px;
+  padding: 5px 13px;
+  margin-top: 150px;
+  justify-content: center;
+  color: white;
+}
+
+p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+.actions button {
+  padding: 8px 16px;
+  margin-top: 150px;
+  justify-content: center;
+  font-size: 30px;
+  border-radius: 10px;
+  background-color: #088b3f;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  grid-gap: 30px;
+  grid-template-columns: repeat(5, 180px);
+  grid-template-rows: repeat(4, 180);
+}
+
+.card {
+  height: 180px;
+  width: 180px;
+  border-radius: 15px;
+  background-color: #092c53;
+  border-style: solid;
+  border-width: 5px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in-out;
+}
+
+.image {
+  border-radius: fixed;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 100px;
+  hight: 100px;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.card .front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .back {
+  background-image: url("disney.png");
+  background-position: center center;
+  background-size: cover;
+  backface-visibility: hidden;
+}
+
+.card .front {
+  transform: rotateY(180deg);
+}
+
+.popup button {
+  padding: 5px 13px;
+  font-size: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.finishPopup button {
+  padding: 5px 13px;
+  font-size: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  background-color: white;
+  color: #088b3f;
+}
+
+.finishPopup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000080;
+  /*background-color: rgba(0, 0, 0, 0.5);*/
+  z-index: 9999;
+}
+
+.finishPopup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: green;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
